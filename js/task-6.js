@@ -10,10 +10,11 @@ const btnDestroy = document.querySelector('[data-destroy]');
 const boxElem = document.querySelector('#boxes');
 
 function createBoxes(amount) {
-
+    boxElem.innerHTML = '';
+    
     let size = 30;
 
-    for (let i = 0; i < amount; i++){
+    for (let i = 1; i <= amount; i++) {
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
@@ -34,7 +35,7 @@ function destroyBoxes() {
 btnCreate.addEventListener( 'click', onBtnClick);
 
 function onBtnClick () {
-    inputValue = inputElem.value;
+    const inputValue = inputElem.value;
     if (inputValue >= 1 && inputValue <= 100){
     createBoxes(inputValue);
     inputElem.value = '';
@@ -42,3 +43,8 @@ function onBtnClick () {
 }
 
  btnDestroy.addEventListener ( 'click', destroyBoxes);
+
+
+
+
+ 
