@@ -1,12 +1,12 @@
 const inputElem = document.querySelector('#name-input');
-const spamElem = document.querySelector('#name-output');
+const spanElem = document.querySelector('#name-output');
 
 inputElem.addEventListener('input', updateInput);
 
 function updateInput (){
     const inputValue = inputElem.value.trim();
     const newOutput = inputValue === '' ? `Anonymous`: inputValue;
-  spamElem.textContent = newOutput;
+  spanElem.textContent = newOutput;
 }
 
 

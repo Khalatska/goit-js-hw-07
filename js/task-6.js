@@ -14,7 +14,7 @@ function createBoxes(amount) {
     
     let size = 30;
 
-    for (let i = 1; i <= amount; i++) {
+    for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
@@ -35,7 +35,7 @@ function destroyBoxes() {
 btnCreate.addEventListener( 'click', onBtnClick);
 
 function onBtnClick () {
-    const inputValue = inputElem.value;
+    const inputValue = Number(inputElem.value);
     if (inputValue >= 1 && inputValue <= 100){
     createBoxes(inputValue);
     inputElem.value = '';

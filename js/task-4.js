@@ -6,18 +6,18 @@ formElem.addEventListener( 'submit', onFormSubmit);
 function onFormSubmit (event) { 
     event.preventDefault();
 
-    const emailValue = formElem.elements.email.value.trim();
-    const passwordValue = formElem.elements.password.value.trim();
+    const email = formElem.elements.email.value.trim();
+    const password = formElem.elements.password.value.trim();
     
 
-    if( emailValue === '' || passwordValue === '') {
+    if( email === '' || password === '') {
         return alert('All form fields must be filled in');
         
     }
     
     const formData = {
-        emailValue,
-        passwordValue,
+        email,
+        password,
     }
 
     console.log(formData);
